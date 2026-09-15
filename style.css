@@ -1,0 +1,415 @@
+/*
+  Capstone CSS Architecture — Module 1
+
+  Cascade strategy
+  ----------------
+  Styles are arranged in low-to-high priority layers.
+
+  Refactoring record
+  ------------------
+  Before: repeated raw colors, type sizes, radius values, and transitions
+  would be needed within each component.
+  After: semantic tokens below provide one reusable source. Earlier
+  starter names `--clr-text-main` and `--clr-primary` are kept as aliases
+  while body and heading styles use the clearer semantic names they require.
+
+  AI disclosure
+  -------------
+  AI was used primarily for help interpreting assignment requirements, reviewing my existing HTML and CSS, 
+  identifying missing or unused CSS rules, and choosing a color palette.
+
+
+*/
+
+@layer reset, base, layout, components, utilities, states, overrides, print;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  img,
+  picture,
+  svg,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    cursor: pointer;
+  }
+}
+
+@layer base {
+  :root {
+    /* Color */
+    --clr-primary: #f7f0e8;
+    --clr-surface: #fffaf4;
+    --clr-text-main: #211916;
+    --clr-text-second: #62534b;
+    --clr-burgundy: #6f1839;
+    --clr-burgundy-dark: #4f0d27;
+    --clr-gold: #7d4e15;
+    --clr-border: #decfc1;
+    --clr-focus: #005fcc;
+    --clr-callout-bg: #f8e6d3;
+    --clr-callout-border: #9b5a20;
+
+    --clr-bg-primary: var(--clr-primary);
+    --clr-text-primary: var(--clr-text-main);
+    --clr-text-muted: var(--clr-text-second);
+    --clr-action: var(--clr-burgundy);
+    --clr-action-hover: var(--clr-burgundy-dark);
+
+    /* Typography */
+    --ff-academic: Georgia, serif;
+    --ff-sans: "Segoe UI", system-ui, sans-serif;
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 1.75rem;
+    --fs-xl: 2.5rem;
+    --lh-tight: 1.2;
+    --lh-body: 1.6;
+
+    /* Spacing and shape */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-pill: 999px;
+
+    /* Interaction */
+    --focus-ring: 3px solid var(--clr-focus);
+    --focus-offset: 3px;
+    --transition-fast: 150ms ease-in-out;
+    --transition-smooth: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    background-color: var(--clr-bg-primary);
+    color: var(--clr-text-primary);
+    font-family: var(--ff-sans);
+    font-size: var(--fs-base);
+    line-height: var(--lh-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--clr-text-primary);
+    font-family: var(--ff-academic);
+    line-height: var(--lh-tight);
+  }
+
+  h1 {
+    font-size: var(--fs-xl);
+  }
+
+  h2 {
+    font-size: var(--fs-lg);
+  }
+
+  h3 {
+    font-size: var(--fs-md);
+  }
+
+  a {
+    color: var(--clr-action);
+    text-underline-offset: 0.15em;
+  }
+
+  :focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+}
+
+@layer layout {
+  .l-container {
+    margin-inline: auto;
+    max-width: var(--max-width-desktop);
+    padding-inline: var(--space-4);
+  }
+
+  .l-cluster {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .l-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  }
+}
+
+@layer components {
+  .site-header {
+    border-bottom: 1px solid var(--clr-border);
+    padding-block: var(--space-4);
+  }
+
+  .site-nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: space-between;
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+  }
+
+  .site-nav__link {
+    border-radius: var(--radius-sm);
+    color: var(--clr-text-primary);
+    display: inline-block;
+    padding: var(--space-2) var(--space-3);
+    text-decoration: none;
+  }
+
+  .button {
+    --button-bg: var(--clr-action);
+    --button-text: var(--clr-surface);
+    --button-padding: var(--space-3) var(--space-4);
+
+    background: var(--button-bg);
+    border: 1px solid var(--button-bg);
+    border-radius: var(--radius-sm);
+    color: var(--button-text);
+    display: inline-block;
+    font-weight: 700;
+    padding: var(--button-padding);
+    text-decoration: none;
+    transition:
+      background-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .button--secondary {
+    --button-bg: transparent;
+    --button-text: var(--clr-action);
+  }
+
+  .event-card {
+    container-type: inline-size;
+    container-name: event-card;
+
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+  }
+
+  .event-card__layout {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .event-card__date {
+    color: var(--clr-burgundy);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+  }
+
+  .event-card__content {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .event-card__details {
+    color: var(--clr-text-muted);
+    font-size: var(--fs-sm);
+  }
+
+  .event-card__link {
+    color: var(--clr-surface);
+    background: var(--clr-burgundy);
+    border-radius: var(--radius-sm);
+    justify-self: start;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+  }
+  /* FALLBACK - just incase the browser doesn't support container queries */
+  @container event-card (min-width: 38rem) {
+    .event-card__layout {
+      align-items: start;
+      grid-template-columns: 9rem minmax(0, 1fr);
+    }
+
+    .event-card__date {
+      border-inline-end: 1px solid var(--clr-border);
+      padding-inline-end: 1rem;
+    }
+  }
+
+  .card {
+    --card-padding: var(--space-5);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    display: grid;
+    gap: var(--space-3);
+    padding: var(--card-padding);
+  }
+
+  .callout {
+    background: var(--clr-callout-bg);
+    border-inline-start: 4px solid var(--clr-callout-border);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: var(--space-4);
+  }
+
+  .form-field {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .form-field__label {
+    font-weight: 700;
+  }
+
+  .form-field__input {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    color: var(--clr-text-primary);
+    min-height: 2.75rem;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .resource-list {
+    border-top: 1px solid var(--clr-border);
+    list-style: none;
+    padding: 0;
+  }
+
+  .resource-list__item {
+    border-bottom: 1px solid var(--clr-border);
+    padding-block: var(--space-4);
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--clr-border);
+    color: var(--clr-text-muted);
+    margin-top: var(--space-8);
+    padding-block: var(--space-6);
+  }
+}
+
+@layer utilities {
+  .u-text-center {
+    text-align: center;
+  }
+
+  .u-text-muted {
+    color: var(--clr-text-muted);
+  }
+
+  .u-visually-hidden {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+@layer states {
+  a:hover {
+    color: var(--clr-action-hover);
+  }
+
+  .button:hover {
+    background: var(--clr-action-hover);
+    color: var(--clr-surface);
+    transform: translateY(-1px);
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link[aria-current="page"] {
+    background: var(--clr-burgundy);
+    color: var(--clr-surface);
+  }
+
+  .form-field__input:focus {
+    border-color: var(--clr-focus);
+  }
+
+  /* CDN suggestion, not really sure how this one will work (below) */
+  .form-field__input:invalid:not(:placeholder-shown) {
+    border-color: var(--clr-burgundy);
+  }
+}
+
+@layer overrides {
+}
+
+@layer print {
+  @media print {
+    @page {
+      margin: 0.75in;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+      font-size: 11pt;
+    }
+
+    .site-header,
+    .site-footer,
+    .site-nav,
+    .button {
+      display: none;
+    }
+
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .card,
+    .callout,
+    .resource-list__item {
+      break-inside: avoid;
+      border-color: #000;
+    }
+
+    .l-container {
+      max-width: none;
+      padding: 0;
+    }
+  }
+}

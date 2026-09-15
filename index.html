@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Drink & Think brings curious people together for engaging lectures and a relaxed night out."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drink & Think</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="l-container site-nav">
+        <a class="logo" href="index.html">Drink & Think</a>
+
+        <nav aria-label="Main navigation">
+          <ul class="site-nav__list">
+            <li>
+              <a class="site-nav__link" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li><a class="site-nav__link" href="#about">About</a></li>
+            <li><a class="site-nav__link" href="#events">Schedule</a></li>
+            <li><a class="site-nav__link" href="#booking">Book now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="l-container hero__layout">
+          <div class="l-stack">
+            <p class="eyebrow">Curiosity after dark</p>
+            <h1>Good drinks. Great ideas. Interesting people.</h1>
+            <p class="hero__text">
+              Drink & Think pairs fascinating academic lectures with a relaxed
+              evening out. Bring a friend, enjoy a drink, and leave with a new
+              idea.
+            </p>
+            <div class="l-cluster">
+              <a class="button" href="#events">View upcoming events</a>
+              <a class="button button--secondary" href="#about">How it works</a>
+            </div>
+          </div>
+
+          <aside class="callout l-stack" aria-labelledby="next-event-heading">
+            <p class="eyebrow">Next event</p>
+            <h2 id="next-event-heading">The Science of a Good Night’s Sleep</h2>
+            <p>Thursday, October 16 · 7:00 p.m.</p>
+            <p>Hosted at The Copper Room, Downtown.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="events">
+        <div class="l-container l-stack">
+          <div class="section-heading">
+            <p class="eyebrow">Upcoming lectures</p>
+            <h2>Find your next night out.</h2>
+          </div>
+
+          <!-- Wide context: direct child of the main content container -->
+          <article class="event-card">
+            <div class="event-card__layout">
+              <div class="event-card__date">
+                <p>Thursday</p>
+                <time datetime="2026-10-16">October 16</time>
+                <p>7:00 p.m.</p>
+              </div>
+
+              <div class="event-card__content">
+                <p class="eyebrow">Featured event</p>
+                <h3>The Science of a Good Night’s Sleep</h3>
+                <p>
+                  Explore what happens in the brain while we sleep and practical
+                  ways to improve rest.
+                </p>
+                <p class="event-card__details">
+                  The Copper Room · Downtown · Tickets from $18
+                </p>
+                <a class="event-card__link" href="#booking">Reserve a seat</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Narrower contexts: each event card is inside the schedule grid -->
+          <div class="l-grid">
+            <article class="event-card">
+              <div class="event-card__layout">
+                <div class="event-card__date">
+                  <p>Thursday</p>
+                  <time datetime="2026-10-30">October 30</time>
+                  <p>7:00 p.m.</p>
+                </div>
+
+                <div class="event-card__content">
+                  <h3>Why We Tell Stories</h3>
+                  <p>
+                    Discover how stories shape memory, culture, empathy, and the
+                    ways we understand one another.
+                  </p>
+                  <a class="event-card__link" href="#booking">Reserve a seat</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card">
+              <div class="event-card__layout">
+                <div class="event-card__date">
+                  <p>Thursday</p>
+                  <time datetime="2026-11-13">November 13</time>
+                  <p>7:00 p.m.</p>
+                </div>
+
+                <div class="event-card__content">
+                  <h3>Desert Skies and the Search for Life</h3>
+                  <p>
+                    A guided look at astronomy, exoplanets, and what makes a
+                    world capable of supporting life.
+                  </p>
+                  <a class="event-card__link" href="#booking">Reserve a seat</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="about">
+        <div class="l-container l-stack">
+          <p class="eyebrow">About Drink & Think</p>
+          <h2>Learning belongs in everyday life.</h2>
+          <p class="measure">
+            Our events make room for curiosity outside the classroom. Each
+            evening features a welcoming venue, a drink of your choice, and an
+            engaging speaker who makes a complex idea approachable.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="booking">
+        <div class="l-container l-stack">
+          <p class="eyebrow">Booking information</p>
+          <h2>Save your seat.</h2>
+          <p class="measure">
+            Tickets, pricing, accessibility information, and venue details will
+            appear here. Contact us with questions before reserving your place.
+          </p>
+          <a class="button" href="mailto:hello@drinkandthink.example"
+            >Contact Drink & Think</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="l-container">
+        <p>© 2026 Drink & Think. Learn something new.</p>
+      </div>
+    </footer>
+  </body>
+</html>
