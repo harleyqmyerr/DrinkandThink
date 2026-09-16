@@ -281,22 +281,20 @@
 
   .button--secondary {
     --button-bg: transparent;
-    --button-text: var(--clr-action);
+    --button-text: var(--clr-burgundy);
   }
 
   .event-card {
-    container-type: inline-size;
-    container-name: event-card;
-
     background: var(--clr-surface);
     border: 1px solid var(--clr-border);
     border-radius: var(--radius-md);
-    padding: 1rem;
+    padding: var(--space-5);
   }
 
-  .event-card__layout {
+  .event-card__layout,
+  .event-card__content {
     display: grid;
-    gap: 1rem;
+    gap: var(--space-3);
   }
 
   .event-card__date {
@@ -305,34 +303,37 @@
     font-weight: 700;
   }
 
-  .event-card__content {
-    display: grid;
-    gap: 0.75rem;
-  }
-
   .event-card__details {
     color: var(--clr-text-muted);
     font-size: var(--fs-sm);
   }
 
   .event-card__link {
-    color: var(--clr-surface);
     background: var(--clr-burgundy);
     border-radius: var(--radius-sm);
+    color: var(--clr-surface);
     justify-self: start;
-    padding: 0.75rem 1rem;
+    padding: var(--space-3) var(--space-4);
     text-decoration: none;
   }
-  /* FALLBACK - just incase the browser doesn't support container queries */
-  @container event-card (min-width: 38rem) {
-    .event-card__layout {
-      align-items: start;
-      grid-template-columns: 9rem minmax(0, 1fr);
+
+  /* Fallback */
+  @supports (container-type: inline-size) {
+    .event-card {
+      container-name: event-card;
+      container-type: inline-size;
     }
 
-    .event-card__date {
-      border-inline-end: 1px solid var(--clr-border);
-      padding-inline-end: 1rem;
+    @container event-card (min-width: 38rem) {
+      .event-card__layout {
+        align-items: start;
+        grid-template-columns: fit-content(9rem) minmax(0, 1fr);
+      }
+
+      .event-card__date {
+        border-inline-end: 1px solid var(--clr-border);
+        padding-inline-end: var(--space-4);
+      }
     }
   }
 
@@ -420,6 +421,11 @@
     background: var(--clr-action-hover);
     color: var(--clr-surface);
     transform: translateY(-1px);
+  }
+
+  .event-card__link:hover {
+    background: var(--clr-action-hover);
+    color: var(--clr-surface);
   }
 
   .site-nav__link:hover,
