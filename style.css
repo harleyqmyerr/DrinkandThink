@@ -150,9 +150,8 @@
 
 @layer layout {
   .l-container {
+    inline-size: min(100% - 2rem, var(--max-width-desktop));
     margin-inline: auto;
-    max-width: var(--max-width-desktop);
-    padding-inline: var(--space-4);
   }
 
   .l-stack > * + * {
@@ -166,9 +165,39 @@
     gap: var(--space-3);
   }
 
+  .section {
+    padding-block: clamp(var(--space-7), 8vw, 6rem);
+  }
+
+  .measure {
+    max-inline-size: 65ch;
+  }
+
+  /* Grid 1: event cards gain columns only when each has at least 16rem. */
   .l-grid {
     display: grid;
-    /* gap: var(--space-2); */
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  }
+
+  /* Grid 2: hero text and the event callout share space without fixed widths. */
+  .hero__layout {
+    align-items: center;
+    display: grid;
+    gap: clamp(var(--space-6), 7vw, var(--space-8));
+    grid-template-columns: minmax(0, 1.4fr) minmax(17rem, 0.6fr);
+  }
+
+  /* The hero stacks when its heading and callout can't be read. */
+  @media (max-width: 44rem) {
+    .hero__layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .event-grid {
+    display: grid;
+    gap: var(--space-5);
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   }
 }
