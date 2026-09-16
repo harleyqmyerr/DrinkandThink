@@ -216,6 +216,35 @@
     justify-content: space-between;
   }
 
+  .hero {
+    /* going to add a photo here instead */
+    background: var(--clr-border);
+    padding-block: clamp(var(--space-8), 10vw, 8rem);
+  }
+
+  .hero__text {
+    color: var(--clr-text-muted);
+    font-size: var(--fs-md);
+    max-inline-size: 62ch;
+  }
+
+  .section--muted {
+    background: #f1e5da;
+  }
+
+  .site-logo {
+    color: var(--clr-text-primary);
+    font-family: var(--ff-academic);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .section-heading {
+    display: grid;
+    gap: var(--space-2);
+  }
+
   .site-nav__list {
     display: flex;
     flex-wrap: wrap;
