@@ -66,7 +66,7 @@
     --clr-border: #decfc1;
     --clr-focus: #005fcc;
     --clr-callout-bg: #f8e6d3;
-    --clr-callout-border: #9b5a20;
+    --clr-callout-border: #e9a42d;
 
     --clr-bg-primary: var(--clr-primary);
     --clr-text-primary: var(--clr-text-main);
@@ -85,7 +85,10 @@
     --fs-xl: 2.5rem;
     --lh-tight: 1.2;
     --lh-body: 1.6;
-
+    /*
+  Fonts use local system fallbacks only. No external web fonts are requested,
+  so there is no font-download delay or font-related layout shift.
+*/
     /* Spacing and shape */
     --space-1: 0.25rem;
     --space-2: 0.5rem;
@@ -167,7 +170,11 @@
 
   .section {
     padding-block: clamp(var(--space-7), 8vw, 6rem);
+    position: relative;
   }
+
+  /* border designs */
+  /* Base style for both SVGs */
 
   .measure {
     max-inline-size: 65ch;
@@ -186,13 +193,6 @@
     display: grid;
     gap: clamp(var(--space-6), 7vw, var(--space-8));
     grid-template-columns: minmax(0, 1.4fr) minmax(17rem, 0.6fr);
-  }
-
-  /* The hero stacks when its heading and callout can't be read. */
-  @media (max-width: 44rem) {
-    .hero__layout {
-      grid-template-columns: 1fr;
-    }
   }
 
   .event-grid {
@@ -217,8 +217,9 @@
   }
 
   .hero {
-    /* going to add a photo here instead */
-    background: var(--clr-border);
+    /* background: var(--clr-border); */
+    background: linear-gradient(135deg, #fffaf4 0%, #f1e5da 55%, #eac6b9 100%);
+    border-block-end: 4px solid var(--clr-burgundy);
     padding-block: clamp(var(--space-8), 10vw, 8rem);
   }
 
@@ -315,6 +316,33 @@
     justify-self: start;
     padding: var(--space-3) var(--space-4);
     text-decoration: none;
+  }
+
+  .event-card__media {
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .event-card__media img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+
+  .our-story {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    .text-wrapper,
+    figure {
+      width: 50%;
+    }
+    figure {
+      max-height: 400px;
+    }
   }
 
   /* Fallback */
@@ -481,6 +509,22 @@
     .l-container {
       max-width: none;
       padding: 0;
+    }
+  }
+}
+
+/* The hero stacks when its heading and callout can't be read. */
+@media (max-width: 44rem) {
+  .hero__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .our-story {
+    flex-direction: column; /* Flips to horizontal row */
+
+    .text-wrapper,
+    figure {
+      width: 100%; /* Splits 50/50 on larger screens */
     }
   }
 }

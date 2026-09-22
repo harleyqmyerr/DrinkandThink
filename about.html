@@ -33,7 +33,7 @@
     </header>
     <!-- Hero section -->
     <main>
-      <section class="hero">
+      <section class="hero" id="about-hero">
         <div class="l-container l-stack">
           <p class="eyebrow">Learn with Us</p>
           <h1>A night out for curious people</h1>
@@ -45,17 +45,51 @@
       </section>
       <!-- introduction and more info -->
       <section class="section">
-        <div class="l-container l-stack">
-          <p class="eyebrow">Our Story</p>
-          <h2 id="our-story-heading">Learning belongs in everyday life</h2>
-          <p>
-            Drink &amp; was created in the hopes to bring like-minded
-            individuals in search of learning together; in a relaxed environment
-            that welcomes new ideas and concepts.
-          </p>
-          <!-- NEED TO ADD MORE INFO -->
-          <p></p>
-          <!--  -->
+        <div class="l-container l-stack our-story">
+          <div class="text-wrapper">
+            <p class="eyebrow">Our Story</p>
+            <h2 id="our-story-heading">Learning belongs in everyday life</h2>
+            <p>
+              Drink &amp; was created in the hopes to bring like-minded
+              individuals in search of learning together; in a relaxed
+              environment that welcomes new ideas and concepts.
+            </p>
+          </div>
+          <!--
+          Asset: Featured Drink and Think event photo
+          Source: Pexels - Viridiana Rivera
+          License or permission: Pexels License (free use)
+          Purpose: Shows the welcoming lecture-and-social atmosphere of the featured event.
+          Formats: JPG exported at 640w, 960w, and 1440w.
+          Art direction: The same wide event composition remains understandable at all
+          responsive widths, so separate crops are not needed.
+        -->
+          <figure class="event-card__media">
+            <picture>
+              <source
+                type="image/jpeg"
+                srcset="
+                  Assets/about-hero-640.jpg    640w,
+                  Assets/about-hero-960w.jpg   960w,
+                  Assets/about-hero-1440w.jpg 1440w
+                "
+                sizes="(min-width: 48rem) 36rem, calc(100vw - 2rem)"
+              />
+              <img
+                src="Assets/about-hero-960w.jpg"
+                srcset="
+                  Assets/about-hero-640.jpg    640w,
+                  Assets/about-hero-960w.jpg   960w,
+                  Assets/about-hero-1440w.jpg 1440w
+                "
+                sizes="(min-width: 48rem) 36rem, calc(100vw - 2rem)"
+                width="1440"
+                height="960"
+                alt="Audience members listening to a speaker during a Drink and Think lecture"
+                loading="lazy"
+              />
+            </picture>
+          </figure>
         </div>
       </section>
 
