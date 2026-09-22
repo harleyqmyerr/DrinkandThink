@@ -21,9 +21,9 @@ Image dimensions and file size
 
 Accessibility
 [yes ] Confirmed alt text matches the image’s purpose.
-[yes ] Confirmed decorative elements are not announced to screen readers.
+[ n/a ] Confirmed decorative elements are not announced to screen readers.
 [yes ] Confirmed keyboard focus remains visible and usable.
 
 Layout-shift risk
 [yes ] Confirmed the image region reserves space before loading.
-[yes ] Confirmed any map or external embed has a defined region size and a fallback link.
+[ n/a ] Confirmed any map or external embed has a defined region size and a fallback link.
