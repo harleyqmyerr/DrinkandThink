@@ -1,23 +1,12 @@
 /*
-  Capstone CSS Architecture — Module 1
-
-  Cascade strategy
-  ----------------
-  Styles are arranged in low-to-high priority layers.
-
-  Refactoring record
-  ------------------
-  Before: repeated raw colors, type sizes, radius values, and transitions
-  would be needed within each component.
-  After: semantic tokens below provide one reusable source. Earlier
-  starter names `--clr-text-main` and `--clr-primary` are kept as aliases
-  while body and heading styles use the clearer semantic names they require.
+  Capstone Deliverable: Media and Typography Optimization Build 
 
   AI disclosure
   -------------
-  AI was used primarily for help interpreting assignment requirements, reviewing my existing HTML and CSS, 
-  identifying missing or unused CSS rules, and choosing a color palette.
-
+  I used AI to help interpret the assignment requirements, review my existing responsive layout and typography system,
+   and identify accessibility, performance, and layout-stability checks (checklist layout).
+  I reviewed the recommendations, verified the final asset details and test results myself, 
+  and decided which changes to include in the project.
 
 */
 
