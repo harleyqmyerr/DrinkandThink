@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save Your Seat | Contact Drink & Think</title>
+    <meta
+      name="description"
+      content="Reserve tickets for upcoming lectures, select beverage preference tiers, and submit accessibility or custom accommodation requests securely."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- GLOBAL STRUCTURE: TOP NAVIGATION HEADER -->
+    <header class="site-header">
+      <div class="l-container">
+        <nav class="site-nav" aria-label="Main Navigation">
+          <a href="index.html" class="site-logo">Drink &amp; Think</a>
+          <ul class="site-nav__list">
+            <li><a href="index.html" class="site-nav__link">Home</a></li>
+            <li><a href="about.html" class="site-nav__link">About</a></li>
+            <li><a href="schedule.html" class="site-nav__link">Schedule</a></li>
+            <li>
+              <a href="contact.html" class="site-nav__link" aria-current="page"
+                >Book now</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN SYSTEM CONTEXT -->
+    <main class="l-container section">
+      <div class="contact-two-column-layout">
+        <!-- FORM COLUMN -->
+        <section
+          aria-labelledby="form-heading"
+          class="l-stack"
+          style="--stack-space: var(--space-4)"
+        >
+          <header class="section-heading">
+            <h1 id="form-heading">Save your seat.</h1>
+            <p class="u-text-muted">
+              Tickets, pricing, accessibility coordination, and venue bookings.
+              Fill out our reservation interest fields below.
+            </p>
+          </header>
+
+          <!-- NATIVE ACCESSIBLE HTML FORM ELEMENT -->
+          <form
+            action="#"
+            method="POST"
+            class="l-stack"
+            style="--stack-space: var(--space-4)"
+            aria-describedby="form-mandatory-hint"
+          >
+            <p
+              id="form-mandatory-hint"
+              class="u-text-muted"
+              style="font-size: var(--fs-sm)"
+            >
+              Fields marked with an asterisk (<span aria-hidden="true">*</span>)
+              are mandatory.
+            </p>
+
+            <div class="form-field">
+              <label class="form-field__label" for="contact-name"
+                >Full Name <span aria-hidden="true">*</span></label
+              >
+              <input
+                class="form-field__input"
+                type="text"
+                id="contact-name"
+                name="name"
+                required
+                aria-required="true"
+                autocomplete="name"
+                placeholder="Jane Doe"
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="contact-email"
+                >Email Address <span aria-hidden="true">*</span></label
+              >
+              <input
+                class="form-field__input"
+                type="email"
+                id="contact-email"
+                name="email"
+                required
+                aria-required="true"
+                autocomplete="email"
+                placeholder="jane@example.com"
+              />
+            </div>
+
+            <!-- EVENT SELECTION FIELD (C9 SEGMETATION) -->
+            <fieldset class="form-fieldset">
+              <legend class="form-field__label">
+                Lecture Night Selection <span aria-hidden="true">*</span>
+              </legend>
+              <div class="form-checkbox-group">
+                <label class="form-checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="lecture-interest"
+                    value="sleep"
+                  />
+                  The Science of Sleep (Oct 16)
+                </label>
+                <label class="form-checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="lecture-interest"
+                    value="stories"
+                  />
+                  Why We Tell Stories (Oct 30)
+                </label>
+                <label class="form-checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="lecture-interest"
+                    value="skies"
+                  />
+                  Desert Skies &amp; Life (Nov 13)
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- ACCESS NEEDS TEXT FIELD (C10 ACCESS NEEDS FIELD) -->
+            <div class="form-field">
+              <label class="form-field__label" for="contact-accomm"
+                >Access Needs &amp; Accommodation Requests</label
+              >
+              <span
+                id="accomm-desc"
+                class="u-text-muted"
+                style="
+                  font-size: var(--fs-xs);
+                  margin-top: calc(var(--space-1) * -1);
+                "
+                >Please state any physical mobility requests or dietary
+                requirements. Avoid providing private health details.</span
+              >
+              <textarea
+                class="form-field__input form-field__textarea"
+                id="contact-accomm"
+                name="accommodations"
+                aria-describedby="accomm-desc"
+                rows="4"
+                placeholder="e.g., Wheelchair seating deployment, non-alcoholic drink option alternatives..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="button">Submit Inquiry Form</button>
+          </form>
+        </section>
+
+        <!-- VISUAL SIDEBAR INFO COLUMN -->
+        <aside
+          class="contact-sidebar-info l-stack"
+          style="--stack-space: var(--space-5)"
+        >
+          <!-- STYLED RESERVED MAP PHOTO AREA -->
+          <article class="venue-map-card">
+            <div class="venue-map-card__photo-frame">
+              <span class="photo-placeholder-text"
+                >Interactive Venue / Accessibility Transit Map Overlay
+                Area</span
+              >
+            </div>
+            <div class="venue-map-card__body">
+              <h3>Venue Locations &amp; Logistics</h3>
+              <p class="u-text-muted">
+                Our recurring lecture blocks rotate across high-quality
+                municipal spaces and lounges equipped with structural ramps and
+                dedicated transit entry lines.
+              </p>
+            </div>
+          </article>
+
+          <div class="callout">
+            <h3>Need Special Booking Setup?</h3>
+            <p
+              class="u-text-muted"
+              style="font-size: var(--fs-sm); margin-top: var(--space-2)"
+            >
+              For large academic parties, private department rentals, or custom
+              catering configurations, please contact our Event Liaison directly
+              at <strong>coordinator@drinkandthink.edu</strong>.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- GLOBAL FOOTER SYSTEM -->
+    <footer class="site-footer">
+      <div class="l-container u-text-center">
+        <p>&copy; 2026 Drink &amp; Think. Learn something new.</p>
+      </div>
+    </footer>
+  </body>
+</html>
