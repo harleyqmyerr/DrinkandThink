@@ -9,6 +9,69 @@
       content="Browse our weekly and bi-weekly Thursday night lecture series. Find fascinating academic topics, guest speaker bios, and curated beverage pairings."
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Event Series JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EventSeries",
+        "name": "Drink & Think Lecture Series",
+        "description": "An educational night out where guests can enjoy premium wine, spirits, and craft beers while attending engaging academic lectures.",
+        "url": "https://drinkandthinklectures.com",
+        "subEvent": [
+          {
+            "@type": "Event",
+            "name": "The Science of a Good Night's Sleep",
+            "startDate": "2026-10-16T19:00:00-07:00",
+            "endDate": "2026-10-16T21:00:00-07:00",
+            "eventStatus": "https://schema.org",
+            "eventAttendanceMode": "https://schema.org",
+            "location": {
+              "@type": "Place",
+              "name": "The Copper Room",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Downtown Main Hall"
+              }
+            },
+            "performer": {
+              "@type": "Person",
+              "name": "Dr. Elena Rostova",
+              "jobTitle": "Neuroscience Lead"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "18.00",
+              "priceCurrency": "USD",
+              "url": "https://drinkandthinklectures.com"
+            }
+          },
+          {
+            "@type": "Event",
+            "name": "Why We Tell Stories",
+            "startDate": "2026-10-30T19:00:00-07:00",
+            "endDate": "2026-10-30T21:00:00-07:00",
+            "eventStatus": "https://schema.org",
+            "eventAttendanceMode": "https://schema.org",
+            "location": {
+              "@type": "Place",
+              "name": "Academic Lecture Hall B"
+            },
+            "performer": {
+              "@type": "Person",
+              "name": "Prof. Marcus Vance",
+              "jobTitle": "Anthropology Chair"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "18.00",
+              "priceCurrency": "USD",
+              "url": "https://drinkandthinklectures.com"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- GLOBAL STRUCTURE: TOP NAVIGATION HEADER -->
