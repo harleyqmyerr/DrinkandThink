@@ -474,6 +474,177 @@
   .skip-link:focus {
     top: 1rem;
   }
+
+  /* About image and captions */
+  .event-card__media {
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .event-card__media img {
+    inline-size: 100%;
+    block-size: auto;
+  }
+
+  .our-story figure {
+    max-height: none;
+  }
+
+  figcaption {
+    padding-top: 0.5rem;
+    color: var(--clr-text-muted);
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+  }
+
+  /* Schedule cards */
+  .schedule-item-card {
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    gap: 2rem;
+    padding: 1.5rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+  }
+
+  .schedule-item-card__photo-frame {
+    margin: 0;
+  }
+
+  .schedule-item-card__photo-frame img {
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: var(--radius-sm);
+  }
+
+  .schedule-item-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    color: var(--clr-burgundy);
+    font-weight: 700;
+  }
+
+  .schedule-item-card__body {
+    margin-block: 1rem;
+  }
+
+  .schedule-item-card__body > * + * {
+    margin-top: 1rem;
+  }
+
+  .schedule-item-card__details-list {
+    padding-left: 1.25rem;
+  }
+
+  .schedule-item-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Contact layout and controls */
+  .contact-two-column-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+    gap: 3rem;
+  }
+
+  .form-fieldset {
+    padding: 1rem;
+    border: 1px solid var(--clr-text-muted);
+    border-radius: var(--radius-sm);
+  }
+
+  .form-checkbox-group {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .form-checkbox-label {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  .form-field__input {
+    min-width: 0;
+    width: 100%;
+    border-color: var(--clr-text-muted);
+    cursor: text;
+  }
+
+  .form-field__textarea {
+    resize: vertical;
+  }
+
+  input[type="checkbox"] {
+    accent-color: var(--clr-burgundy);
+  }
+
+  .venue-map-card__body {
+    padding: 1.5rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+  }
+
+  .venue-map-card__body > * + * {
+    margin-top: 1rem;
+  }
+
+  /* HTML-only form demonstration */
+  .form-demo {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+  }
+
+  .demo-result {
+    display: none;
+  }
+
+  .form-demo:not([open]) + .demo-result {
+    display: block;
+  }
+
+  .demo-result > * + * {
+    margin-top: 1rem;
+  }
+
+  /* Small screens */
+  @media (max-width: 44rem) {
+    .schedule-item-card,
+    .contact-two-column-layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .schedule-item-card__photo-frame {
+      max-width: 18rem;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+  }
+
+  /* Reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .button {
+      transition: none;
+    }
+  }
 }
 
 @layer print {

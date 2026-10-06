@@ -12,6 +12,7 @@
     <meta name="robots" content="noindex, follow" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- GLOBAL STRUCTURE: TOP NAVIGATION HEADER -->
     <header class="site-header">
       <div class="l-container">
@@ -49,9 +50,13 @@
           </header>
 
           <!-- NATIVE ACCESSIBLE HTML FORM ELEMENT -->
+          <dialog
+            open
+            class="form-demo"
+            aria-labelledby="form-heading"
+          ></dialog>
           <form
-            action="#"
-            method="POST"
+            method="dialog"
             class="l-stack"
             style="--stack-space: var(--space-4)"
             aria-describedby="form-mandatory-hint"
@@ -166,18 +171,11 @@
         >
           <!-- STYLED RESERVED MAP PHOTO AREA -->
           <article class="venue-map-card">
-            <div class="venue-map-card__photo-frame">
-              <span class="photo-placeholder-text"
-                >Interactive Venue / Accessibility Transit Map Overlay
-                Area</span
-              >
-            </div>
             <div class="venue-map-card__body">
-              <h3>Venue Locations &amp; Logistics</h3>
+              <h2>Venue information</h2>
               <p class="u-text-muted">
-                Our recurring lecture blocks rotate across high-quality
-                municipal spaces and lounges equipped with structural ramps and
-                dedicated transit entry lines.
+                Confirmed addresses, transit routes, and accessibility details
+                will be added before live bookings open.
               </p>
             </div>
           </article>
@@ -204,5 +202,4 @@
       </div>
     </footer>
   </body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
 </html>
