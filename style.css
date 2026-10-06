@@ -420,7 +420,7 @@
   .u-visually-hidden {
     height: 1px;
     margin: -1px;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding: 0;
     position: absolute;
     white-space: nowrap;
@@ -462,6 +462,18 @@
 }
 
 @layer overrides {
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -8rem;
+    z-index: 10;
+    padding: 1rem;
+    background: var(--clr-surface);
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
 }
 
 @layer print {
