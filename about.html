@@ -40,13 +40,36 @@
     <!-- Hero section -->
     <main id="main-content" tabindex="-1">
       <section class="hero" id="about-hero">
-        <div class="l-container l-stack">
-          <p class="eyebrow">Learn with Us</p>
-          <h1>A night out for curious people</h1>
-          <p class="hero__text">
-            We bring approachable academic ideas, welcoming speakers from around
-            the world, and good drinks - all in one!
-          </p>
+        <div class="l-container about-hero__layout">
+          <div class="l-stack">
+            <p class="eyebrow">Learn with Us</p>
+            <h1>A night out for curious people</h1>
+
+            <p class="hero__text">
+              We bring approachable academic ideas, welcoming speakers from
+              around the world, and good drinks together.
+            </p>
+
+            <a class="button" href="schedule.html">Explore upcoming lectures</a>
+          </div>
+
+          <picture class="about-hero__photo">
+            <source
+              type="image/webp"
+              srcset="
+                Assets/community-event-640.webp   640w,
+                Assets/community-event-960.webp   960w,
+                Assets/community-event-1440.webp 1440w
+              "
+              sizes="(min-width: 48rem) 50vw, 100vw"
+            />
+            <img
+              src="Assets/community-event.jpg"
+              width="1440"
+              height="960"
+              alt="People chatting and enjoying drinks at a warmly lit gathering"
+            />
+          </picture>
         </div>
       </section>
       <!-- introduction and more info -->
@@ -95,7 +118,7 @@
                 loading="lazy"
               />
             </picture>
-            <figcaption>Illustrative cafe atmosphere</figcaption>
+            <figcaption>Live Lecture</figcaption>
           </figure>
         </div>
       </section>
@@ -104,7 +127,7 @@
       <section class="section">
         <div class="l-container l-stack">
           <div class="section-heading">
-            <p class="eyebrow">Your evening</p>
+            <p class="eyebrow">Feeling curious?</p>
             <h2 id="how-it-works-heading">How it Works</h2>
           </div>
 

@@ -619,6 +619,119 @@
     margin-top: 1rem;
   }
 
+  #booking .l-container {
+    position: relative;
+  }
+
+  /* decorative svg */
+
+  #booking .cheers-decoration {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    width: 160px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  @media (max-width: 64rem) {
+    #booking .cheers-decoration {
+      display: none;
+    }
+  }
+
+  #about-hero {
+    padding-block: clamp(2rem, 6vw, 5rem);
+  }
+
+  .about-hero__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .about-hero__layout > * {
+    min-width: 0;
+  }
+
+  .about-hero__photo {
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid var(--clr-border);
+    box-shadow: 0 12px 30px rgb(33 25 22 / 15%);
+  }
+
+  .about-hero__photo img {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+  }
+
+  @media (max-width: 47.99rem) {
+    .about-hero__layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  /* Our Story: image left, text right */
+  .our-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .our-story > .text-wrapper {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .our-story > figure {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-height: none;
+    margin: 0;
+  }
+
+  .our-story > .text-wrapper {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Match the header image treatment */
+  .our-story picture {
+    display: block;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid var(--clr-border);
+    box-shadow: 0 12px 30px rgb(33 25 22 / 15%);
+  }
+
+  .our-story picture img {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+  }
+
+  @media (max-width: 47.99rem) {
+    .our-story {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .our-story > .text-wrapper {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .our-story > figure {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
   /* Small screens */
   @media (max-width: 44rem) {
     .schedule-item-card,
