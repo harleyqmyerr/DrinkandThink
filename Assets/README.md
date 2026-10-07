@@ -1,4 +1,4 @@
-Asset Inventory
+## Asset Inventory
 
       Featured lecture photo • About Page
 
@@ -9,6 +9,34 @@ Accessibility: Descriptive alt text explains the meaningful image content.
 Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
 Layout stability: Width and height attributes reserve image space.
 
+      Featured speaker photo • Schedule Page
+
+Source: https://www.pexels.com/@alaxmatias/
+License or permission: Pexels license
+Purpose: Represents the atmosphere of a Drink and Think event.
+Accessibility: Descriptive alt text explains the meaningful image content.
+Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
+Layout stability: Width and height attributes reserve image space.
+
+      Featured speaker photo • Schedule Page
+
+Source: https://www.pexels.com/@helenalopes/
+License or permission: Pexels license
+Purpose: Represents the atmosphere of a Drink and Think event.
+Accessibility: Descriptive alt text explains the meaningful image content.
+Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
+Layout stability: Width and height attributes reserve image space.
+
+      Featured speaker photo • Schedule Page
+
+Source: https://www.pexels.com/@xomidov/
+License or permission: Pexels license
+Purpose: Represents the atmosphere of a Drink and Think event.
+Accessibility: Descriptive alt text explains the meaningful image content.
+Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
+Layout stability: Width and height attributes reserve image space.
+Featured lecture photo • About Page
+
       Fonts
 
 Georgia and system interface fonts
@@ -18,7 +46,7 @@ Fallback behavior: Georgia falls back to serif; Segoe UI falls back to system-ui
 
 <!-- ------------------------------------------------------------------- -->
 
-Media and Typography Testing Notes
+## Media and Typography Testing Notes
 
 Responsive widths
 [yes ] Checked approximately 320 px wide.

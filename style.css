@@ -595,7 +595,7 @@
     margin-top: 1rem;
   }
 
-  /* HTML-only form demonstration */
+  /* HTML-only form */
   .form-demo {
     position: static;
     width: 100%;
@@ -632,6 +632,17 @@
 
     h1 {
       font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    @media (max-width: 479px) {
+      .schedule-item-card__actions .button {
+        inline-size: 100%;
+        min-block-size: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
     }
   }
 

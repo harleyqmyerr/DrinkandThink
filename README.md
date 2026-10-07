@@ -1,0 +1,39 @@
+### Overview:
+
+Drink & Think is a four-page capstone mock website for 'curious adults interested in academic lectures, conversation, and a relaxed evening out.'
+
+## Links
+
+Published website: https://harleyqmyerr.github.io/DrinkandThink/
+
+Repository: https://github.com/harleyqmyerr/DrinkandThink
+
+## Page scope
+
+**Home:** Introduces the concept and highlights lecture topics.
+
+**About:** Explains the evening format, mission, and values.
+
+**Schedule:** Presents lecture dates, speaker profiles, beverage pairings, and pricing.
+
+**Contact:** Provides the reservation-interest interface and accommodation fields.
+
+## Implementation
+
+The website uses semantic HTML and modern CSS without executable JavaScript. CSS cascade layers organize the reset, base styles, layouts, components, utilities, states, overrides, and print styles.
+
+## Evidence and testing
+
+## Known limitations
+
+The reservation form demonstrates the interface and native browser validation; it does not connect to a booking service.
+
+Event details and speaker profiles are capstone content.
+
+Search indexing is disabled with noindex.
+
+Photo source and licensing:
+
+## AI assistance
+
+AI assisted with reviewing assignment requirements, suggesting HTML/CSS changes, preparing resized image copies, and drafting documentation. I am aware I am responsible for reviewing accepted changes and verifying the final published implementation. Final test results and accepted or rejected suggestions will be documented in the submission evidence.
