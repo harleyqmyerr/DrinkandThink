@@ -9,6 +9,15 @@ Accessibility: Descriptive alt text explains the meaningful image content.
 Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
 Layout stability: Width and height attributes reserve image space.
 
+      Featured lecture photo • About Page
+
+Source: https://www.pexels.com/@cottonbro/
+License or permission: Pexels license
+Purpose: Represents the atmosphere of a Drink and Think event.
+Accessibility: Descriptive alt text explains the meaningful image content.
+Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
+Layout stability: Width and height attributes reserve image space.
+
       Featured speaker photo • Schedule Page
 
 Source: https://www.pexels.com/@alaxmatias/
