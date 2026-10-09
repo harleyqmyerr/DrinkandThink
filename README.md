@@ -24,6 +24,16 @@ The website uses semantic HTML and modern CSS without executable JavaScript. CSS
 
 ## Evidence and testing
 
+- All four published HTML pages passed validation with no errors.
+- Primary navigation and representative content/action links worked.
+- Contact fit at 375, 768, and 1440 pixels without horizontal overflow.
+- Tested keyboard targets had visible focus outlines.
+- Empty form submission focused the required name field.
+- 200% browser zoom check passed
+- CSS validation reported container-query errors and warnings;
+  these results and the validator limitations are documented.
+- Four fixes were prepared and checked in a separate review copy.
+
 ## Known limitations
 
 The reservation form demonstrates the interface and native browser validation; it does not connect to a booking service.

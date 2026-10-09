@@ -872,3 +872,10 @@
     }
   }
 }
+/* Full-width mobile booking action */
+@media (max-width: 479px) {
+  .form-demo button[type="submit"] {
+    width: 100%;
+    min-height: 48px;
+  }
+}
