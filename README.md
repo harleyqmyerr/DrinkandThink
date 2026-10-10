@@ -20,7 +20,7 @@ Repository: https://github.com/harleyqmyerr/DrinkandThink
 
 ## Implementation
 
-The website uses semantic HTML and modern CSS without executable JavaScript. CSS cascade layers organize the reset, base styles, layouts, components, utilities, states, overrides, and print styles.
+The website uses semantic HTML and modern CSS. CSS organize the reset, base styles, layouts, components, utilities, states, overrides, and print styles.
 
 ## Evidence and testing
 
@@ -40,7 +40,7 @@ The reservation form demonstrates the interface and native browser validation; i
 
 Event details and speaker profiles are capstone content.
 
-Search indexing is disabled with noindex.
+Pages include canonical URLs and do not contain a noindex directive. Search indexing is not guaranteed.
 
 Photo source and licensing:
 

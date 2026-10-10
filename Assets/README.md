@@ -1,6 +1,6 @@
 ## Asset Inventory
 
-      Featured lecture photo • About Page
+      Hero photo • About Page
 
 Source: https://www.pexels.com/@viridianaor/
 License or permission: Pexels license
@@ -9,32 +9,29 @@ Accessibility: Descriptive alt text explains the meaningful image content.
 Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
 Layout stability: Width and height attributes reserve image space.
 
-      Featured lecture photo • About Page
+      Featured lecture photo  • About Page
 
 Source: https://www.pexels.com/@cottonbro/
 License or permission: Pexels license
 Purpose: Represents the atmosphere of a Drink and Think event.
 Accessibility: Descriptive alt text explains the meaningful image content.
-Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
-Layout stability: Width and height attributes reserve image space.
+Performance:
 
       Featured speaker photo • Schedule Page
 
 Source: https://www.pexels.com/@alaxmatias/
 License or permission: Pexels license
-Purpose: Represents the atmosphere of a Drink and Think event.
-Accessibility: Descriptive alt text explains the meaningful image content.
-Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
-Layout stability: Width and height attributes reserve image space.
+Purpose: Provides an illustrative speaker portrait for the sleep
+lecture card, adding visual interest and helping distinguish the
+event from the other lectures
 
       Featured speaker photo • Schedule Page
 
 Source: https://www.pexels.com/@helenalopes/
 License or permission: Pexels license
-Purpose: Represents the atmosphere of a Drink and Think event.
-Accessibility: Descriptive alt text explains the meaningful image content.
-Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
-Layout stability: Width and height attributes reserve image space.
+Purpose: Provides an illustrative speaker portrait for the
+storytelling lecture card, helping visitors distinguish its
+speaker information and event details.
 
       Featured speaker photo • Schedule Page
 
@@ -42,9 +39,9 @@ Source: https://www.pexels.com/@xomidov/
 License or permission: Pexels license
 Purpose: Represents the atmosphere of a Drink and Think event.
 Accessibility: Descriptive alt text explains the meaningful image content.
-Performance: WebP and JPG variants exported at 640w, 960w, and 1440w.
-Layout stability: Width and height attributes reserve image space.
-Featured lecture photo • About Page
+Performance: Provides an illustrative speaker portrait for the
+astronomy lecture card, helping visitors distinguish its
+speaker information and event details.
 
       Fonts
 
