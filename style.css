@@ -307,33 +307,6 @@
     text-decoration: none;
   }
 
-  .event-card__media {
-    aspect-ratio: 4 / 3;
-    margin: 0;
-    overflow: hidden;
-  }
-
-  .event-card__media img {
-    block-size: 100%;
-    inline-size: 100%;
-    object-fit: cover;
-  }
-
-  .our-story {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    .text-wrapper,
-    figure {
-      width: 50%;
-    }
-    figure {
-      max-height: 400px;
-    }
-  }
-
   /* Fallback */
   @supports (container-type: inline-size) {
     .event-card {
@@ -484,10 +457,6 @@
   .event-card__media img {
     inline-size: 100%;
     block-size: auto;
-  }
-
-  .our-story figure {
-    max-height: none;
   }
 
   figcaption {
@@ -858,18 +827,10 @@
 }
 
 /* The hero stacks when its heading and callout can't be read. */
+/* Stack the Home hero on smaller screens. */
 @media (max-width: 44rem) {
   .hero__layout {
     grid-template-columns: 1fr;
-  }
-
-  .our-story {
-    flex-direction: column; /* Flips to horizontal row */
-
-    .text-wrapper,
-    figure {
-      width: 100%; /* Splits 50/50 on larger screens */
-    }
   }
 }
 /* Full-width mobile booking action */
