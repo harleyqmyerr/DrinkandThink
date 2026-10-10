@@ -1,7 +1,3 @@
-### Overview:
-
-Drink & Think is a four-page capstone mock website for 'curious adults interested in academic lectures, conversation, and a relaxed evening out.'
-
 ## Links
 
 Published website: https://harleyqmyerr.github.io/DrinkandThink/
